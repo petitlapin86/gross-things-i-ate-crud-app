@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/simple-grid.scss">
+    <link rel="stylesheet" href="/css/custom.css">
+    <title>Gross Things I Ate When I was Alone</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-10">
+          <a href="/" style="text-decoration: none;"><h1>Much Free, Very Wow</h1></a>
+        </div>
+
+        <div class="col-2 right">
+          <% if !logged_in? %>
+            <a href="/signup"><button>Sign Up</button></a> <a href="/login"><button>Log In</button></a>
+          <% else %>
+            <a href="/activities/new"><button>Add New Post</button></a><a href="/logout"><button>Log Out</button></a>
+          <% end %>
+        </div>
+
+      </div>
+
+      <%= styled_flash %>
+      <%= yield %>
+
+    </div>
+  </body>
+</html>

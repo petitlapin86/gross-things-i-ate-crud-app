@@ -1,0 +1,19 @@
+<% @posts.each do |post| %>
+  <div class="row">
+      <div class="col-8">
+        <a href="/posts/<%= post.slug %>"><%= post.title %></a>
+      </div>
+
+      <div class="col-2">
+        <%= post.date.strftime('%A, %b %d, %Y') %>
+      </div>
+      <div class="col-2">
+        <%= post.category.titleize %>
+      </div>
+
+      <div class="col-10">
+        <%= post.description %>
+      </div>
+  </div>
+  <br />
+<% end %>

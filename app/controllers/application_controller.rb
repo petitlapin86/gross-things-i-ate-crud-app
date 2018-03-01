@@ -2,4 +2,10 @@ require './config/environment'
 
 class ApplicationController < Sinatra::Base
 
-end 
+  get '/' do
+      @posts = Post.all
+      erb(:'/posts/index')
+    end
+
+
+end
